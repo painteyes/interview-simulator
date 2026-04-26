@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Google Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d2d3d;
+  border-radius: 2px;
+}
+
+textarea,
+input {
+  outline: none;
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3)
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6)
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0
+  }
+}
+
+.msg-enter {
+  animation: fadeIn 0.35s ease forwards;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+.btn-main {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 13px 32px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+  animation: pulse-glow 2s infinite;
+}
+
+.btn-main:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btn-main:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  animation: none;
+  transform: none;
+}
+
+.btn-ghost {
+  background: none;
+  border: 1px solid #2d2d4d;
+  color: #6060a0;
+  padding: 8px 18px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.btn-ghost:hover {
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+.send-btn {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.send-btn:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.send-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.sim-card {
+  border: 1px solid #1e1e2e;
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sim-card:hover {
+  border-color: #6366f1;
+}
+
+.sim-card.active {
+  border-color: #6366f1;
+  background: #0d0d1a;
+}
+
+.del-btn {
+  background: none;
+  border: none;
+  color: #f87171;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+  padding: 4px;
+}
+
+.del-btn:hover {
+  opacity: 1;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 6px 14px;
+  transition: all 0.2s;
+}
