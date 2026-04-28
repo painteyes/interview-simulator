@@ -10,7 +10,7 @@ OPENROUTER_API_KEY = os.environ["OPENROUTER_API_KEY"]
 #   meta-llama/llama-4-scout:free
 #   microsoft/phi-4-reasoning:free
 #   deepseek/deepseek-r1:free
-MODEL = "google/gemma-3-27b-it:free"
+MODEL = "anthropic/claude-3.5-haiku"
 
 # OpenRouter exposes the same interface as the OpenAI API, so the payload is identical
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
